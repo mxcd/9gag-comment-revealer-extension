@@ -1,0 +1,25 @@
+{
+  "name": "9GAG Comment Revealer",
+  "version": "1.0.0",
+  "description": "Showing comments when accessing a 9GAG post",
+  "manifest_version": 3,
+  "author": "Max Partenfelder",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://9gag.com/gag/*"],
+      "js": ["content.js"]
+    }
+  ],
+
+  "permissions": ["activeTab"]
+}
